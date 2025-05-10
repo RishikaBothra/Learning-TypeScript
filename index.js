@@ -20,3 +20,10 @@ function isLegal(age) {
 }
 isLegal(20);
 isLegal(17);
+//Create a function that takes another function as input, and runs it after 1 second.
+function delayedcall(fn) {
+    setTimeout(fn, 1000);
+}
+delayedcall(function () {
+    console.log('Hello');
+});

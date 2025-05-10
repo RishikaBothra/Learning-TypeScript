@@ -27,3 +27,9 @@ isLegal(17)
 
 //Create a function that takes another function as input, and runs it after 1 second.
 
+function delayedcall(fn:()=>void){// as here the function is giving no value so we give it void as a type,fn is another function.
+    setTimeout(fn, 1000);
+}
+delayedcall(function(){
+    console.log('Hello');
+})

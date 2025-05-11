@@ -13,17 +13,20 @@ To run the file:
 
 for this we need to add a .gitignore file
 and some setting in tsconfig.json
+```ts
 {
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
   },
 }
-
+```
 => If we allow implicit any then we dont have to define the type of the variable in the function
 but if we set noImplicitAny to true then we have to define the type of the variable in the function(it's by default true)
+```ts
 {
   "compilerOptions": {
     "noImplicitAny": false
   }
 }
+```

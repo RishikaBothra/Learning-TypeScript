@@ -1,14 +1,14 @@
-learning TypeScript
+# learning TypeScript
 -------------------------------------------------------------------------
 # TypeScript
-TypeScript is a superset of JavaScript that adds static typing to the language.
+1. TypeScript is a superset of JavaScript that adds static typing to the language.
+2. TypeScript is a strongly typed programming language that builds on     JavaScript, giving you better tooling at any scale.
 --------------------------------------------------------------------------
-To run the file:
+# To run the file:
 1. tsc <filename>.ts
-2.node <foldername>/<filename>.js
+2. node <foldername>/<filename>.js
 --------------------------------------------------------------------------
-#tsconfig - flags
-
+# tsconfig - flags
 => Here this src file is created so that while making a git repo it will only add this file not the js files
 
 for this we need to add a .gitignore file
@@ -30,3 +30,4 @@ but if we set noImplicitAny to true then we have to define the type of the varia
   }
 }
 ```
+------------------------------------------------------------------------

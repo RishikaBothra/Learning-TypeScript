@@ -5,8 +5,8 @@
 2. TypeScript is a strongly typed programming language that builds on     JavaScript, giving you better tooling at any scale.
 --------------------------------------------------------------------------
 # To run the file:
-1. tsc <filename>.ts
-2. node <foldername>/<filename>.js
+1. tsc filename.ts
+2. node foldername/filename.js
 --------------------------------------------------------------------------
 # tsconfig - flags
 => Here this src file is created so that while making a git repo it will only add this file not the js files

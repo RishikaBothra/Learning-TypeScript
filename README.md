@@ -45,5 +45,10 @@ but if we set noImplicitAny to true then we have to define the type of the varia
 # difference between interface and type
 interfaces can be implemented as classes
 
+# difference between abstract class and interface
+abstract class can have its own implementation of methods while an interface cannot.
+-------------------------------------------------------------------------
+
+
 
 

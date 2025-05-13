@@ -21,3 +21,5 @@ class employee extends userin{
     }
 }
 
+const emp = new employee('fin');
+console.log(emp.greet());

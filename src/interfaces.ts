@@ -1,4 +1,4 @@
-//How can you assign types to objects?
+// 1. How can you assign types to objects?
 
 function greet(user:{
     name: string;
@@ -12,7 +12,7 @@ let user = {
 }
 greet(user);
 
-//adding a object inide a object
+// 2. adding a object inide a object
 
 function greet1(user1: {
     name: string;
@@ -35,7 +35,7 @@ let user1 = {
 }
 greet1(user1);
 
-//here we are again and again writing the same type of object so we can create a interface and use it in the function
+// 3. here we are again and again writing the same type of object so we can create a interface and use it in the function
 
 interface UserType{ //custom type foyour project
     fistname: string;
@@ -57,7 +57,7 @@ greetuser(user2);
 
 // In the above code, when we create an interface, every property defined in the interface must be present in user2; otherwise, it will give an error
 
-// if we want to make a property optional than we can use ? in the interface
+// 4. if we want to make a property optional than we can use ? in the interface
 
 interface userType1{
     firstname:string;
@@ -95,7 +95,7 @@ let user4:userType2 = {
 hello1(user4);
 
 
-//another example
+// 5. another example
 
 interface User{
     name:string,
@@ -140,7 +140,7 @@ let user6:User = {
 userinfo(user5);
 userinfo(user6);
 
-//one interface can use another interface
+// 6. one interface can use another interface
 
 interface Address{
     city:string;
@@ -182,4 +182,87 @@ userinfo1(user7);
 // here we are using the address interface in the userinformation interface and we are using the address interface in the office interface as well. so we can use the same interface in multiple places.
 
 
+// 7. Interfaces have another special property.You can implement interfaces as class.
+
+interface People{
+    name:string,
+    age:number,
+    greet(name:string):string,// can also be written like this greet:() => string
+}//greet is a function not a premative.
+
+let person:People = {
+    name:'rish',
+    age:18,
+    greet:() => {
+        return "hi" + " " +  person.name;
+    }
+}
+
+console.log(person.greet(person.name));
+
+// 8. making a class from above interface
+class manager implements People{
+    name:string;
+    age:number;
+    //we can add more properties in the class which are not in the interface,but its compulsory to add the properties which are in the interface.
+    constructor(name:string,age:number){
+        this.name = name;// here we are using this keyword to access the name and age property of the class
+        this.age = age;
+
+    }
+    greet(name:string):string{
+        return "hi" + " " +  this.name;
+    }
+
+}
+
+let manager1 = new manager('fin',20);
+//The new keyword is used to create an instance of a class.In typescript when u use constructor u have to use new kwyword.
+console.log(manager1.greet(manager1.name));
+
+
+// 9. using extend fun
+
+class shape{
+    area(){
+        console.log("hi i am area");
+    }
+}
+
+class Rectangle extends shape{
+    width:number;
+    height:number;
+
+    constructor(){
+        super();// here we are using super keyword to access the constructor of the parent class
+        this.width = 10;
+        this.height = 20;
+    }
+}
+
+ const r = new Rectangle();
+r.area();
+
+// 10. one more example of interface and class
+
+interface User1{
+    name:string;
+    age:number;
+    isLegal():boolean;
+}
+
+class Manager implements User1{
+    name:string;
+    age:number;
+
+    constructor(name:string,age:number){
+        this.name = name;
+        this.age = age;
+    }
+    isLegal(): boolean {
+        return this.age >= 18;
+    }
+}
+const manager2 = new Manager('fin',20);
+console.log(manager2.isLegal());
 

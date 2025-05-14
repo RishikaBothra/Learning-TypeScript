@@ -98,13 +98,15 @@ hello1(user4);
 // 5. another example
 
 interface User{
-    name:string,
-    age:number,
-    address?:{
-        city?:string,
-        country?:string,
-        pincode?:string,
-    }//here we have use ?in the every property of address so it will not give an error if we dont give the value of city and country.If we give ? only to the address then it will give an error if we dont give the value of city and country.
+    firstName: string;
+    lastName: string;
+    name: string;
+    age: number;
+    address?: {
+        city?: string;
+        country?: string;
+        pincode?: string;
+    }; //here we have use ?in the every property of address so it will not give an error if we dont give the value of city and country.If we give ? only to the address then it will give an error if we dont give the value of city and country.
 }
 
 function userinfo(user:User){
@@ -115,27 +117,32 @@ function userinfo(user:User){
         console.log('your country is'+' '+user.address.country);
         console.log('your pincode is'+' '+user.address.pincode);
     }
+}
 
-}
 let user5:User={
-    name:'Raj',
-    age:20,
-    address:{
-        city:'ahmedabad',
-        country:'india',
-        pincode:'380006'
+    firstName: 'Raj',
+    lastName: 'Sharma',
+    name: 'Raj',
+    age: 20,
+    address: {
+        city: 'ahmedabad',
+        country: 'india',
+        pincode: '380006'
     }
-}
+}; // Moved user5 outside the function
 
 let user6:User = {
-    name:'Rish',
-    age:18,
-    address:{
-        pincode:'380001'
+    firstName: 'Rish',
+    lastName: 'Verma',
+    name: 'Rish',
+    age: 18,
+    address: {
+        pincode: '380001'
     }
     // here we are not giving city and country so it will not give an error and the default value will be undefined.
+};
 
-}
+
 
 userinfo(user5);
 userinfo(user6);

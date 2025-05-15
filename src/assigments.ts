@@ -26,3 +26,34 @@ let a:admin = {
 }
 console.log(greetUserOrAdmin(u));
 console.log(greetUserOrAdmin(a));
+
+// create a function that takes an array of numbers and returns the sum of the numbers in the array
+function sum(array:number[]):number{
+    let sum = 0;
+    for(let i=0;i<arr.length;i++){
+        sum += arr[i];
+    }
+    return sum;
+}
+let array:number[] = [1,2,3,4,5,6,7,8,9];
+console.log(sum(arr));
+
+// crearte a interface anmed user and return sum of the ages.
+interface Userageadd {
+    name: string;
+    age: number;
+}
+function sumage(userOne:Userageadd, userTwo:Userageadd):number{
+    return userOne.age + userTwo.age;
+}
+let userOne:Userageadd = {
+    name: 'fin',
+    age: 20
+}
+
+let userTwo:Userageadd = {
+    name: 'fin',
+    age: 20
+}
+
+console.log(sumage(userOne, userTwo));

@@ -53,3 +53,4 @@ function updateUser1(updatedProps: UpdatePropsOptional) {
     // hit the database tp update the user
 }
 updateUser1({})
+

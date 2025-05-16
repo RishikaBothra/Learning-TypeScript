@@ -48,6 +48,10 @@ interfaces can be implemented as classes
 # difference between abstract class and interface
 abstract class can have its own implementation of methods while an interface cannot.
 -------------------------------------------------------------------------
+# Pick
+pick lets you pick from both interface and type
+------------------------------------------------------------------------
+
 
 
 

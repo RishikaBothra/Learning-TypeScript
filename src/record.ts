@@ -38,3 +38,5 @@ const userer: Users = {
 };
 
 console.log(userer['abc123']); // Output: { id: 'abc123', name: 'John Doe' }
+
+//for javascript we use map
